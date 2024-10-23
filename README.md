@@ -1,4 +1,4 @@
-# HTML-Zero-Hero
+# HTML-Zero-Hero (Check out the master branch)
 
 🚀 Zero to Hero Web Development Course
 
