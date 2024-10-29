@@ -1,0 +1,27 @@
+#k{
+background-color: green;
+animation: color 2s infinite;
+    border: 2px solid ;
+}
+
+.p{
+    background-color: red;
+    animation: color 2s infinite;
+    border: 2px solid ;
+}
+
+@keyframes color{
+    50%{
+        background-color: yellow;
+        text-align: left;
+        
+    }
+    70%{
+        background-color: orange;
+        text-align: center;
+    }
+    100%{
+        background-color: aquamarine;
+        text-align: right;
+    }
+}
