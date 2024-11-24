@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing Units</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        border: 2px solid;
+        width: 80vw;
+        height: 10vw;
+        background-color: aquamarine;
+        box-sizing: border-box;
+        margin: auto;
+
+        /* 1px = 196inch */
+    }
+    .cont{
+        border: 2px solid;
+        width: 80vw;
+        /* height: 80vw; */
+        background-color: aquamarine;
+        box-sizing: border-box;
+        margin: 23px auto;
+        font-size: 16px;
+        min-height: 80vh;
+        /* 1px = 196inch */
+        /* vw= veiw port */
+        /* rm = perticuler value(value = size) of 2,3,4.....times */
+        /* rem = root value(value = size) of 2,3,4...time */
+
+        /* phone display , vmin = width:  */
+        /* laptop display , vmin = heigth:  */
+
+        /* % = Parents of the given % width=50% -- 50% of paragraph of 50% */
+    }
+    .cont p{
+        font-size: 1em;
+        width: 50%;
+        border: solid red;
+    }
+
+    .my{
+        border: 2px solid;
+        box-sizing: border-box;
+        margin: 23px auto;
+        font-size: 22px;
+        width: 80vw;
+        /* width: 100vmin; */
+    }
+
+    .new {
+        box-sizing: border-box;
+        margin: auto;
+        border: solid;
+        width: 80vw;
+       min-height: 20vw;
+        
+    }
+    .new > div {
+        width: 50%;
+        border: 2px solid red ;
+    }
+    .new > div > div{
+        width: 50%;
+        border: 2px solid green ;
+    }
+
+</style>
+<body>
+    <div class="box">
+        this is a box
+    </div>
+    <div class="cont">
+       <p>
+        this is another box
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, optio quasi voluptatem ut explicabo fugiat sed maxime laudantium corrupti nisi facilis, nemo consectetur laborum, sint similique animi reprehenderit vero quibusdam. Assumenda architecto a rerum alias asperiores quisquam quis illum hic enim nobis ea, numquam, eius vel cupiditate? Veniam reprehenderit fugiat vitae blanditiis labore, minus amet molestiae?
+       </p>
+    </div>
+
+    <div class="my">
+        3rd cont
+    </div>
+    <div class="new">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus delectus dolorem ad adipisci veniam quas distinctio numquam, perferendis rem libero, illum, eos quisquam.
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius at a cumque iure, architecto consectetur porro repudiandae nobis molestias necessitatibus laborum vero eaque.</div>
+        </div>
+    </div>
+</body>
+</html>
