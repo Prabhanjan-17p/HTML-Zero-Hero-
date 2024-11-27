@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid red;
+            /* display: inline; */
+            display: inline-block;
+            /* when this is write then the the top padding are not show. then it convert as inline-block then the top padding are show*/
+            padding: 23px;
+            margin: 20px ;
+        }
+        .box1{
+            /* display: none; */
+            /* this command is used to donot display the element */
+            /* visibility: hidden; */
+            /* this command is used to hiden the element and size are stay there */
+
+            /* display: grid; */
+            /* display: flex; */
+            /* justify-content: center; */
+            /* width: 400px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        i am a box
+    </div>
+    <div class="box ">also a nice box</div>
+    <span>i am a boy</span>
+    <span> and good</span>
+</body>
+</html>
