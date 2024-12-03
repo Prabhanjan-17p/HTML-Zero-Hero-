@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Propertry</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 533px;
+            width: 80vw;
+            margin: 3px auto;
+            padding: 3px;
+            border: 2px solid;
+        }
+        .box1{
+            background-color: red;
+            position: sticky;
+            top: 0px;
+            height: 111px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            /* position: absolute; */
+            /* this cmd is used to apply to newer ancister(means out of the group , 1st check the parents to know his parent are position or not and transform , filter, or perspective property can also make an element appear as positioned )  */
+            /* top: 0; */
+        }
+        .box2{
+            background-color: green;
+            /* position: relative;
+            z-index: 1;
+            top: 20px;
+            left: -40px; */
+            /* this cmd is used to display in fornt upper  */
+            /* position: fixed; */
+            /* this cmd is used fixed the position */
+        }
+        .box3{
+            background-color: white;
+            /* position: relative; */
+            /* this cmd is used to transfrom static to dyanamic */
+            /* top: -40px;
+            left: 40px; */
+            
+        }
+        .box4{
+            background-color: goldenrod;
+        }
+        .par{
+            /* transform , filter, or perspective property can also make an element appear as positioned */
+            padding: 43px;
+            margin: 34px;
+            border: 3px solid purple;
+        }
+    </style>
+</head>
+<body>
+   <div class="par">
+    <div class="box box1">edf</div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+   </div>
+</body>
+</html>
