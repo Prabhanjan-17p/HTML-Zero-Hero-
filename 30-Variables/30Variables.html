@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root{
+            /* All the variable set */
+            
+            --color: rgba(76, 221, 32, 0.901);
+            --seccolor: rgb(46, 153, 210);
+            /* it's a gloabla variable */
+
+            --defpad: 34px;
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        .con{
+            background-color: var(--seccolor);
+        }
+        li{
+            list-style: none;
+            padding: var(--defpad);
+        }
+        ul{
+            display: flex;
+        }
+
+        ul li:first-child{
+            --color: rgb(175, 175, 255);
+            background-color: var(--color);
+            /* background-color: var(--color ,blue); */
+            /* this cmd is used to when the color var are not there the deafult color is applyed */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="con">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi veniam iusto impedit quos deleniti earum odit porro, fuga non laborum numquam ratione aperiam maxime expedita vero eaque molestiae facere doloribus.
+    </div>
+</body>
+</html>
