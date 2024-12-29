@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise4</title>
+  <style>
+    :root {
+      --color: rgb(1, 1, 87);
+      --seccolor: rgb(60, 111, 213);
+      --bordercolor: rgb(240, 176, 176);
+      --bodycolor: rgb(236, 225, 225);
+      --linecolor: rgb(248, 248, 248);
+      --headercolor: rgb(13, 43, 173);
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .name {
+      display: flex;
+      gap: 50px;
+      float: right;
+      margin-right: 40px;
+      position: relative;
+    }
+
+    li {
+
+      list-style: none;
+      margin-left: 10px;
+      margin-top: 10px;
+      color: white;
+      /* border: 2px solid var(--bordercolor);
+           background-color: var(--seccolor); */
+    }
+
+    .box {
+      border: 2px solid;
+      height: 40px;
+      background-color: var(--color);
+
+    }
+
+    .autotype {
+      color: var(--headercolor)
+    }
+
+    .midname {
+      margin-top: 30vh;
+      float: right;
+      margin-right: 35vw;
+    }
+
+    .proPic {
+      height: 280px;
+      width: 280px;
+      border-radius: 110px;
+      border: 2px solid;
+      margin-left: 20vw;
+      margin-top: 20vh;
+    }
+
+    .pic {
+      height: 40px;
+      width: 40px;
+
+    }
+
+    .sy1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: aliceblue;
+      transform: scaleX(0);
+      transition: 1s;
+    }
+
+    .sy2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: aliceblue;
+      transform: scaleX(0);
+      transition: 1s;
+    }
+
+    .sy3::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: aliceblue;
+      transform: scaleX(0);
+      transition: 0.5s;
+    }
+
+    .sy1,
+    .sy2,
+    .sy3,
+    li :hover::after {
+      transform: scaleX(1);
+      cursor: pointer;
+
+    }
+
+    li:hover::after {
+      background-color: aqua;
+      cursor: pointer;
+      list-style: 2px var(--linecolor);
+      list-style: none;
+      transform: scaleX(1);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--linecolor);
+    }
+
+    body {
+      background-color: var(--bodycolor);
+    }
+
+  .about{
+    margin-top: 550px;
+    margin-left: 40px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <nav>
+      <ul class="name">
+        <li class="sy1"><a href="/">Home</a></li>
+        <li class="sy2"><a href="/">Contact us</a></li>
+        <li class="sy3"><a href="/">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <div class="midname">
+      <h1>I'm a <span class="autotype"></span></h1>
+    </div>
+    <div class="pic">
+      <img src="ProfilePic.png" alt="" class="proPic">
+    </div>
+
+
+  <!-- about -->
+  <div class="about">
+
+    <h2>About :</h2>
+    <h5>Name - Prabhanjan Amanta</h5>
+    <h5>Current study <b >BCA LAST YEAR </b></h5>
+    <h5><Address>State-Odisha,Dist-Angul,Block-Banarpal,At/Po-Gadashantri</Address></h5>
+  </div>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('.autotype', {
+      strings: ['Programmer', 'Designer', 'Coder'],
+      typeSpeed: 150,
+      backspeed: 150,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>
