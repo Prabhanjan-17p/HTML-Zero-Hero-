@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more on css selector</title>
+    <style>
+        .box:first-child{
+            /* background-color: red; */
+        }
+        .box::first-line{
+            /* color: white; */
+            /* it's show the white color only the 1st line  */
+        }
+        .boxes *{
+            /* background-color: blue; */
+            color: blue;
+        }
+
+        /* [data-color="primary"]{
+            border: 2px solid black;
+        } */
+        .box:nth-child(odd){
+            background-color: red;
+            /* it's apply only the odd number of the div */
+        }
+        .box:nth-last-child(1){
+            background-color: black;
+        }
+        /* .boxes::before{
+            content: "kanha";.
+            it insert a content first of the content
+        } */
+        /* .boxes::after{
+            content: "amanta"; 
+            it insert a content last of the content
+        } */
+        ::selection{
+            color: aqua;
+            background-color: black;
+            /* it work the when select the some word */
+        }
+        .box::first-letter{
+            color: purple;
+            font-size: 45px;
+        }
+        input::placeholder{
+            color: blue;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">i am the first box of the boxes class</div>
+        <div  data-color="primary" class="box">i am a box</div>
+        <div class="box">i am a box</div>
+        <div class="box">i am a box</div>
+        <!-- <span>this color can be changes</span> -->
+       <input type="text" placeholder="type ur name">
+    </div>
+</body>
+</html>
