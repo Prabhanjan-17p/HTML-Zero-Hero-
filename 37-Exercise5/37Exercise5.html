@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul {
+            background-color: aqua;
+            list-style: none;
+            height: 26px;
+            width: 100vw;
+            padding: 18px 20px;
+            /* position: sticky; */
+        }
+        nav ul li{
+            display: inline;
+           margin-left: 20px;
+        }
+        .main{
+            display: flex;
+            background-color: bisque;
+            width: 100vw;
+        }
+        .mainn{
+            height: 600px;
+            width: 600px;
+            border: 2px solid;
+            /* display: block; */
+            margin: 20px 60px ;
+            margin-left: 60px;
+        }
+        .div1{
+            background-color: blueviolet;
+        }
+        .div2{
+            background-color: brown;
+        }
+        .fot{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fott{
+            height: 90px;
+            width: 990px;
+            border: 2px solid black;
+            /* margin: 20px 150px; */
+            margin-top: 20px;
+            text-align: center;
+           
+        }
+        header{
+            position: sticky;
+            top: 0px; 
+        }
+        .cirfix{
+            height: 32px;
+            width: 32px;
+            background-color: orange;
+            position: fixed;
+            bottom: 12px;
+            right: 23px;
+            border-radius: 50%;
+
+        }
+   
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="headh">
+                <li class="navName1">Home </li>
+                <li class="navName2">About</li>
+                <li class="navName3">Contact us</li>
+            </ul>
+     
+        </nav>
+    </header>
+    <div class="cirfix"></div>
+    <main class="main">
+        <div class="mainn div1"></div>
+        <div class="mainn div2"></div>
+    </main>
+    
+    <footer class="fot">
+        <div class="fott">well come to sigma web devlopemnt page</div>
+    </footer>
+    
+</body>
+</html>
