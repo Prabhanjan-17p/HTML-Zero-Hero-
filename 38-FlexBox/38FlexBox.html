@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex BOX</title>
+    <style>
+        .cont {
+            border: 2px solid red;
+            display: flex;
+            /* this cmd is used support the flex box class */
+            height: 80vh;
+            justify-content: center;
+            /* this cmd is used to, top center the content   */
+            align-items: center;
+            /* this cmd is used to ,middel center the content  */
+            /* flex-direction: column; */
+            /* this cmd is used to convert the row to column and vicevarsa */
+            /* flex-direction: column-reverse; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* this cmd is used to when the content are large then, the content are shift to the bottom  */
+            /* align-content: flex-start; */
+            /* align-content: center; */
+            /* this cmd is used when the large data are get center  */
+            flex-flow: row wrap;
+            /* this cmd is used to assign the flow of the flex  */
+            /* gap: 30px; */
+            /* column-gap: 20px;
+            row-gap: 30px;
+            gap: 30px 20px; */
+
+        }
+
+        .item {
+            height: 32px;
+            width: 32px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            /* margin: 4px; */
+            /* flex-grow: 1; */
+            /* this cmd show all the item are value is same  */
+        }
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        /* this cmd is show , high order number show in last and low oreder order number show in fast */
+        .item1{
+            /* flex-grow: 3; */
+            /* this box store 3 box at a time beacuse flex-grow is 3 */
+            /* flex-shrink: 2; */
+            /* this cmd is used to show the when the screen are smal then it small is size of 2 */
+            /* align-self: flex-end; */
+            /* this cmd is used to show only that specific item  */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="cont">
+            <div class="item item1 order-3">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item order-1"> low </div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div> 
+
+        </div>
+    </main>
+</body>
+
+</html>
