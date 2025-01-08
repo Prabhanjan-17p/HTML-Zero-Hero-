@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid CSS</title>
+    <style>
+        .contt{
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                "side article article"
+                                "fotter fotter fotter";
+            /* this cmd means that the 1st row has 1 different column , and the 2nd row has 2 different column and the last 3rd row has 1different column */
+        }
+        .item{
+            height: 40px;
+            /* width: 40px; */
+            border: 2px solid red;
+        }
+        .item1{
+            grid-area: nav;
+            background-color: black;
+            color: aliceblue;
+        }
+        .item2{
+            grid-area: side;
+            background-color: aquamarine;
+        }
+        .item3{
+            grid-area: article;
+            background-color: blueviolet;
+        }
+        .item4{
+            grid-area: article;
+            background-color: orange;
+        }
+        .item5{
+            grid-area: fotter;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="contt">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+    </div>
+</body>
+</html>
