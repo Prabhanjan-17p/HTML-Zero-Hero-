@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise7</title>
+    <style>
+        * {
+            font-family: "Segoe UI";
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .nav-right ul {
+            display: flex;
+            /* list-style: none; */
+            gap: 34px;
+        }
+
+        .nav-right ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+        }
+
+        .nav-left {
+            width: 40px;
+            height: 23px;
+
+        }
+
+        .nav-left img {
+            width: 134px;
+        }
+
+        .nav-right li img {
+            width: 23px;
+        }
+
+        .main {
+            width: 100%;
+            border-radius: 2px solid black;
+            margin-top: 20px;
+
+            display: grid;
+            /* grid-template-columns: 200px 200px 200px; */
+            grid-template-areas: "nav nav nav"
+                " main main main";
+            justify-content: center;
+            row-gap: 30px;
+            column-gap: 60px;
+            margin: auto;
+            max-width: 50vw;
+        }
+
+        .boxmain {
+            grid-area: nav;
+        }
+
+        .box {
+            height: 120px;
+            width: 230px;
+            /* border: 2px solid black; */
+            border-radius: 8px;
+            background-color: rgba(224, 222, 219, 0.534);
+
+        }
+
+        .box span {
+            height: 20px;
+            border-radius: 3px;
+            font-size: 12px;
+            padding: 2px;
+
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .box h3 {
+            text-align: center;
+        }
+
+        .down {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            column-gap: 5px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .down32 {
+            background-color: rgba(1, 151, 251, 0.853);
+        }
+
+        .down32 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .down64 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .down64 {
+            background-color: rgba(0, 128, 0, 0.727);
+        }
+
+        .headerOfDownloadUltraEdit {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .headerOfDownloadUltraEdit img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .firstsec {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            /* margin: 70px; */
+            margin-top: 50px;
+        }
+
+        .firstsec span {
+            font-size: 30px;
+        }
+
+        .firstsec img {
+            width: 90px;
+        }
+
+        .firstsec div button {
+            height: 30px;
+            width: 310px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: rgba(1, 151, 251, 0.853);
+            color: white;
+        }
+
+        .firstsecUnderhead {
+            font-size: 17px;
+            width: 44vw;
+            text-align: center;
+        }
+
+
+        @media screen and (max-width: 1100px) {
+            .main {
+                grid-template-columns: 1fr;
+                grid-template-areas: "nav"
+                "main";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <img src="41UE-Logo-1.webp" alt="" class="img-nav">
+            </div>
+
+            <div class="nav-right">
+                <ul class="dd">
+                    <li><span>Product</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Prightcing</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Resources</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>About Us</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                            color="#000000" fill="none">
+                            <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><img src="41icons8-cross-100.png" alt=""></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="firstsec">
+            <span>Download <b>UltraEdit</b> for Windows <img src="44Reviews.png" alt=""></span>
+            <div class="firstsecUnderhead">
+                Download and try UltraEdit before ypu buy it! This download include the full Windows version of the text
+                editor.
+            </div>
+            <div>
+                <button>
+                    DOWNLOAD MAC OR UNIX VERSION
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div class="main">
+        <div class="boxmain">
+            <div class="headerOfDownloadUltraEdit">
+                <img src="44UE-Logo-2.jpg" alt="">
+                <p>Download UltraEdit <sub>v234r34(released 01/12/2023)</sub></p>
+            </div>
+        </div>
+        <div class="box box1">
+            <h3>English</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box2">
+            <h3>Deutsch</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box3">
+            <h3>Italiano</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box4">
+            <h3>Español</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box5">
+            <h3>français</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box6">
+            <h3>Português brasileiro</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box7">
+            <h3>日本</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box8">
+            <h3>한국어</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box9">
+            <h3>中国</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+        <div class="box box10">
+            <h3>中國</h3>
+            <div class="down">
+                <span class="down32"><a href="44ue_english.exe">download 32-Bit</a></span>
+                <span class="down64"><a href="44ue_english.exe">download 64-Bit</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
