@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations </title>
+    <style>
+        .cont{
+            background-color: red;
+            width: 40vw;
+            height: 60vh;
+        }
+        .box{
+            /* background-color: blue; */
+            width: 20vw;
+            height: 12vh;
+            animation: kanhaAnime;
+            /* animation-duration: 3s; */
+            /* animation-iteration-count: 3; */
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: cubic-bezier(0, 0.64, 0, 1.12); */
+            /* animation-delay: 1s; */
+            /* animation-direction: alternate-reverse; */
+            /* animation-play-state: paused; */
+
+            /* we used all in one shot  */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: kanhaAnime 1s ease-in-out 2s infinite forwards;
+                        /* kanha ; */
+        }
+        /* .box:hover{
+            animation: kanhaAnime 1s ease-in-out 2s 3 forwards;
+        } */
+
+        @keyframes  kanhaAnime{
+            from{
+                /* transform: translateX(1000px); */
+                background-color: black;
+            }
+            to{
+                background-color: yellow;
+                transform: translateY(1000px);
+            }
+        }
+
+        @keyframes kanha {
+            0%{
+                transform: rotate(100deg);
+            }
+            25%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            75%{
+                transform: rotate(290deg);
+            }
+            100%{
+                transform: rotate(320deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+</html>
