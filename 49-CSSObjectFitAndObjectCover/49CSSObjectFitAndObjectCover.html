@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Cover Object-Fit</title>
+    <style>
+        .container{
+            height: 670px;
+            width: 680px;
+            background-color: aqua;
+            border: 2px solid black;
+
+            background-image: url("https://img.pikbest.com/wp/202345/take-photos-woman-taking-a-photo-with-her-camera_9578452.jpg!sw800");
+            background-repeat: no-repeat;
+            /* this cmd is used to when the image are repeat then you will write this cmd then u see a single image */
+            background-position: center center;
+            /* this cmd is used when you desiced to which part u have show , then this command is used  */
+            background-clip: border-box;
+        }
+        img{
+           
+            width: 466px;
+            height: 488px;
+            object-fit: cover;
+            /* this cmd is used to cover the recent div width or height  */
+            object-position: 10px 20px;
+            
+
+            /* object-position: bottom right; */
+            /* this cmd is used when you desiced to which part u have show , then this command is used  */
+
+            /* object-fit: contain; */
+            /* this cmd is used to contain the full image (means adding some space on this container ) */
+
+            /* object-fit: fill; */
+            /* this cmd used to contant the full height and width  */
+
+            /* object-fit: scale-down; */
+            /* this cmd is used small the pictures */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="49TryCover_fitimages.jpg" alt=""> -->
+    </div>
+</body>
+</html>
