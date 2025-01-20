@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS filters</title>
+    <style>
+        img{
+            filter: blur(10px);
+        }
+        .img1{}
+        .img2{
+            filter: brightness(100%) contrast(100%);
+        }
+        .img3{
+            filter: grayscale(100%);
+            /* this is show black&white style  */
+            /* filter: sepia(100%); */
+            filter: drop-shadow(16px 16px 20px red);
+            /* this is show the shadow of an image  */
+
+            /* filter: invert(75%); */
+        }
+        .img2:hover{
+            filter: drop-shadow(16px 16px 20px red);
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img  class="img1" src="49TryCover_fitimages.jpg" alt="">
+        <img class="img2" src="50filter.webp" alt="">
+        <img class="img3" src="50filter2.jpg" alt="">
+    </div>
+</body>
+</html>
