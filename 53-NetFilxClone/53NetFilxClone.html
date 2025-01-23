@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="shortcut icon" href="53favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .main {
+            background-image: url("53NetFlixMainIMG.jpg");
+            height: 70vh;
+            position: relative;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: max(1200px, 100vw);
+        }
+
+        .main .box {
+            height: 70vh;
+            width: 100%;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            background-color: black;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            max-width: 60vw;
+            height: 100px;
+        }
+
+        nav img {
+            color: red;
+            width: 130px;
+            position: relative;
+            z-index: 10;
+        }
+
+        nav button {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero {
+            /* font-family: "Martel Sans", sans-serif; */
+            font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* text-align: center; */
+            flex-direction: column;
+            color: white;
+            position: relative;
+            gap: 23px;
+            padding: 0 30;
+
+        }
+
+        .hero> :nth-child(1) {
+            font-weight: bolder;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        .hero> :nth-child(2) {
+            font-weight: 400;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .hero> :nth-child(3) {
+            font-weight: 400;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .LineSeparet {
+            height: 8px;
+            background-color: rgb(68, 68, 68);
+            position: relative;
+            z-index: 200;
+
+        }
+
+        .btn {
+            font-family: 'Poppins', sans-serif;
+            padding: 3px 8px;
+            font-weight: 400;
+            background-color: rgba(248, 243, 243, 0.045);
+            color: white;
+            border: 1px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-red-nav {
+            background-color: red;
+            color: white;
+        }
+
+        .btn-red-input {
+            background-color: red;
+            color: white;
+            padding: 3px 24px;
+            font-size: 24px;
+            border-radius: 4px;
+            font-weight: 400;
+        }
+
+        .main input {
+            color: white;
+            padding: 7px 101px 8px 14px;
+            font-weight: 900;
+            font-size: 12px;
+            border-radius: 4px;
+            background-color: rgba(23, 23, 23, 0.7);
+            border: 1px solid rgba(246, 238, 239, 0.5);
+        }
+
+        .heroBTN {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .heroBTN2 {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 60px;
+        }
+
+        .first {
+            margin-top: 40px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            max-width: 70vw;
+            align-items: center;
+            margin: auto;
+            padding: 10px;
+        }
+
+        /* @media screen and (max-width: 1300px) {
+            .first{
+                flex-wrap: wrap;
+            }
+        } */
+
+        .firstIMG {
+            position: relative;
+            /* width: 30vw; */
+        }
+
+        .firstIMG img {
+            width: 555px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .firstIMG video {
+            position: absolute;
+            top: 70px;
+            right: 3px;
+
+        }
+
+        /* .firstHead {
+            align-items: center;
+        } */
+
+        .first>div :first-child {
+            font-size: 48px;
+            font-weight: 900;
+        }
+
+        .first>div :nth-child(2) {
+            font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        section.first>div {
+            font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 34px 0;
+        }
+
+        .Faq h1 {
+            font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 48px;
+            font-weight: 900;
+            margin: 60px 0px 20px 0px;
+        }
+
+        .Faqbox {
+            /* margin: 5px 0px 10px 0px; */
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px auto;
+            background-color: rgb(64, 63, 63);
+            padding: 34px;
+            max-width: 70vw;
+            height: 20px;
+            color: white;
+            cursor: pointer;
+            transition: all 1s ease-out;
+        }
+
+        .Faqbox:hover {
+            background-color: rgba(128, 128, 128, 0.762);
+        }
+
+
+        .Faqbox> :first-child {
+            font-weight: 400;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.21);
+        }
+
+        .FaqboxIMG {
+            filter: invert(1);
+        }
+
+        .inputEmail {
+
+            color: white;
+            padding: 7px 101px 8px 14px;
+            font-weight: 900;
+            font-size: 12px;
+            border-radius: 4px;
+            background-color: rgba(23, 23, 23, 0.7);
+            border: 1px solid rgba(246, 238, 239, 0.5);
+        }
+
+        footer {
+            color: white;
+            max-width: 60vw;
+            margin: auto;
+            gap: 14px;
+        }
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            color: white;
+            max-width: 60vw;
+            margin: auto;
+        }
+
+        /* @media screen and (max-width: 1300px) {
+            .footer {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+        } */
+
+
+        .footerIteam {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer a {
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+            /* text-decoration: none; */
+        }
+
+        .qnsFooter {
+            padding: 34px 0 10px;
+        }
+
+        .sectionThird {
+            position: absolute;
+            top: 38px;
+            right: 78px;
+            width: 19vw;
+
+        }
+
+        .firstIMGthird video {
+            position: absolute;
+            top: 38px;
+            top: 80px;
+            right: 104px;
+            width: 355px;
+        }
+
+        .FaqEndHead {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+
+
+        @media screen and (max-width: 1300px) {
+            nav {
+                max-width: 90vw;
+            }
+
+            .first {
+                flex-wrap: wrap;
+            }
+
+            .firstIMG img {
+                width: 355px;
+            }
+
+            .firstIMG video {
+                width: 351px;
+            }
+
+            .firstIMGthird video {
+                top: 67px;
+                right: 70px;
+                width: 227px;
+            }
+
+            .firstIMGthird img {
+                width: 355px;
+            }
+
+            .hero> :nth-child(1) {
+                padding: 0 20px;
+                font-size: 32px;
+            }
+
+            .hero> :nth-child(2) {
+                padding: 0 20px;
+                font-size: 18px;
+            }
+
+            .hero> :nth-child(3) {
+                padding: 0 20px;
+                font-size: 18px;
+            }
+
+            .heroBTN {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                flex-direction: column;
+            }
+
+            .heroBTN2 {
+
+                flex-direction: column;
+            }
+
+            .first>div :first-child {
+                padding: 0 20px;
+                font-size: 30px;
+                font-weight: 900;
+            }
+
+            .first>div :nth-child(2) {
+                padding: 20px 20px 0;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            .Faq h1 {
+                font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 32px;
+                font-weight: 900;
+                margin: 60px 0px 20px 0px;
+            }
+
+            footer {
+                max-width: 90vw;
+            }
+
+            .FaqEndHead {
+                font-size: 25px;
+                font-weight: 400;
+            }
+
+            .footer {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <span><img width="53" src="53NetFlixLOGOSVg.svg" alt=""></span>
+            <div>
+                <button class="btn">English</button>
+                <button class="btn btn-red-nav">Sing In</button>
+            </div>
+        </nav>
+        <div class="box">
+            <div class="hero">
+                <span>Unlimited movies, TV shows and more</span>
+                <span>Watch anywhere. Cancel anytime.</span>
+                <span> Ready to watch? Enter your email to create or restart your membership.</span>
+                <div class="heroBTN">
+                    <input type="text" placeholder="Email Address">
+                    <button class="btn btn-red-input">Get Started &gt;</button>
+                </div>
+            </div>
+            <div class="LineSeparet">
+            </div>
+        </div>
+    </div>
+
+    <!-- 1 -->
+    <section class="first">
+        <div class="firstHead">
+            <span>Enjoy on your TV</span>
+            <span>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</span>
+        </div>
+        <div class="firstIMG">
+            <img src="53tvNetFlixIMG.png" alt="">
+            <video src="53NetFlixvideo-tv-in-0819.m4v" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="LineSeparet">
+    </div>
+
+    <!-- 2 -->
+    <section class="first">
+        <div class="firstIMG">
+            <img src="53NetFlixmobile-0819.jpg" alt="">
+        </div>
+        <div class="firstHead">
+            <span>Download your shows to watch offline</span>
+            <span>Save your favourites easily and always have something to watch.</span>
+        </div>
+
+    </section>
+    <div class="LineSeparet">
+    </div>
+    <!-- 3 -->
+    <section class="first third">
+        <div class="firstHead">
+            <span>Watch everywhere</span>
+            <span>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</span>
+        </div>
+        <div class="firstIMG firstIMGthird">
+            <img src="53NetFlixdevice-pile-in.png" alt="">
+            <video src="53NetFlixvideo-devices-in.m4v" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="LineSeparet">
+    </div>
+    <!-- 4 -->
+    <section class="first">
+        <div class="firstIMG">
+            <img src="53NetFlixchildrenImg.png" alt="">
+
+        </div>
+        <div class="firstHead">
+            <span>Create profiles for kids</span>
+            <span>Send children on adventures with their favourite characters in a space made just for them—free with
+                your membership.</span>
+        </div>
+
+    </section>
+    <div class="LineSeparet">
+    </div>
+
+    <section class="Faq">
+        <h1>Frequently Asked Questions</h1>
+        <div class="Faqbox">
+            <span style="color: white;">What is Netflix</span>
+            <span class="FaqboxIMG"><img width="42px" src="53PlusIcon.png" alt=""></span>
+        </div>
+        <div class="Faqbox">
+            <span style="color: white;">How much does Netflix Cost?</span>
+            <span><img class="FaqboxIMG" width="42px" src="53PlusIcon.png" alt=""></span>
+        </div>
+        <div class="Faqbox">
+            <span style="color: white;">Where can i Watch?</span>
+            <span><img class="FaqboxIMG" width="42px" src="53PlusIcon.png" alt=""></span>
+        </div>
+        <div class="Faqbox">
+            <span style="color: white;">How do i Cancel?</span>
+            <span><img class="FaqboxIMG" width="42px" src="53PlusIcon.png" alt=""></span>
+        </div>
+        <div class="Faqbox">
+            <span style="color: white;">What can i watch on Netflix?</span>
+            <span><img class="FaqboxIMG" width="42px" src="53PlusIcon.png" alt=""></span>
+        </div>
+        <div class="Faqbox">
+            <span style="color: white;">Is Netflix good for Kids?</span>
+            <span><img class="FaqboxIMG" width="42px" src="53PlusIcon.png" alt=""></span>
+        </div>
+        <h3 class="FaqEndHead" style="color: white; text-align: center;">Ready to watch? Enter your email to create or
+            restart your
+            membership.</h3>
+        <div class="heroBTN2">
+            <input class="inputEmail" type="text" placeholder="Email Address">
+            <button class="btn btn-red-input">Get Started &gt;</button>
+        </div>
+    </section>
+    <div class="LineSeparet">
+    </div>
+
+    <footer>
+        <div class="qnsFooter"> Questions? Call 000-800-919-1694</div>
+        <div class="footer">
+            <div class="footerIteam">
+                <a href="faq">Faq</a>
+                <a href="faq">Investor Relations</a>
+                <a href="faq">Privacy</a>
+                <a href="faq">Speed Test</a>
+            </div>
+            <div class="footerIteam">
+                <a href="faq">
+                    Help Centre</a>
+                <a href="faq">Jobs</a>
+                <a href="faq">Cookie Preferences</a>
+                <a href="faq">
+                    Legal Notices</a>
+            </div>
+            <div class="footerIteam">
+                <a href="faq">
+                    Account</a>
+                <a href="faq">
+                    Ways to Watch</a>
+                <a href="faq">
+                    Corporate Information</a>
+                <a href="faq">
+                    Only on Netflix</a>
+            </div>
+            <div class="footerIteam">
+                <a href="faq">
+                    Media Centre</a>
+                <a href="faq">
+                    Terms of Use</a>
+                <a href="faq">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
