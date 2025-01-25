@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let VAr Const</title>
+</head>
+<body>
+    
+
+    <script>
+        console.log("this is video 55...")
+
+        // var is variable that store all the datatype 
+        var a = 5;
+        var b = 5;
+        
+        var c= "kanha";
+        console.log(a+b)
+
+        // var 8b = 5; this is not work becuase before a variable we can't used number
+
+        // this is return the data type 
+        console.log(typeof a , typeof b ,typeof c)
+
+        // var is global scope 
+        // Let & Const is blocked scope  
+
+        // const a1 = 8;
+        // a1 = a1 + 5; 
+        // that is not work 
+        // in case of const the value we not change once u declaer const that means it fixed
+
+
+        // 1st ex of Let 
+        let num = 7;
+        // this let is used globaly 
+        {
+            let num = 89;
+            // this let is used blocked element 
+            console.log(num)
+        }
+        console.log(num)
+
+
+        // 2nd ex of var 
+        var num1 = 7;
+        // var is always used globally 
+        {
+            var num1 = 89;
+            console.log(num1)
+        }
+        console.log(num1)
+
+
+        // primitive
+        // 7 type of primitive data type 
+        // i-Null ii-Number iii-String iv-Symbol v-undefined vi-Boolean vii-BigInt
+        let x = "kanha bhai";
+        let y = 22;
+        let z = 3.44;
+        const v = true;
+        let q = undefined;
+        let r = null;
+        console.log(x,y,z,v,q,r)
+        console.log(typeof x,typeof y,typeof z,typeof v,typeof q,typeof r)
+
+        // Object 
+        // it is a key value pair of combination 
+        let o = {
+            names : "kanha",
+            "job code": 600
+        }
+        console.log(o);
+        o.salary="10core";
+        console.log(o);
+        o.salary="90core";
+        console.log(o)
+        
+    </script>
+</body>
+</html>
