@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubbling </title>
+    <style>
+        .container {
+            background-color: rgb(213, 12, 94);
+            color: black;
+            border: 1px solid green;
+            width: 100vw;
+            height: 30vh;
+        }
+
+        .ChildContainer {
+            background-color: aliceblue;
+            color: black;
+            border: 42px solid orange;
+        }
+
+        .child {
+            background-color: aliceblue;
+            color: black;
+            border: 42px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="ChildContainer">
+            <div class="child">
+                hey iam child
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation();
+            //this cmd is used to stop the event bubbling
+            alert("hey iam chid")
+        })
+        document.querySelector(".ChildContainer").addEventListener("click", (e) => {
+            e.stopPropagation();
+            //this cmd is used to stop the event bubbling
+            alert("hey iam ChildContainer")
+        })
+        document.querySelector(".container").addEventListener("click", (e) => {
+            // e.stopPropagation();
+            //this cmd is used to stop the event bubbling
+            alert("hey iam container")
+        })
+
+        function getRandomColor() {
+            let var1 = Math.ceil(0 + Math.random() * 255)
+            let var2 = Math.ceil(0 + Math.random() * 255)
+            let var3 = Math.ceil(0 + Math.random() * 255)
+            return `rgb(${var1}, ${var2}, ${var3})`
+        }
+
+        //this function is used to get random color after 2000 mili seconds
+        // setInterval(() => {
+        //     document.querySelector(".container").style.background = getRandomColor();
+        // }, 2000);
+
+        //this function is used to get random color after 2000 mili seconds,only one time change the color
+        setTimeout(()=>{
+            document.querySelector(".container").style.background = getRandomColor();
+        },2000)
+
+        // when we can cancel this setTimeout and setinterval you can used clearInterval and cleartimeout
+    </script>
+</body>
+
+</html>
